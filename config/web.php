@@ -5,12 +5,22 @@ $params = require(__DIR__ . '/params.php');
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
+    // 'catchAll' => ['site/offline'],
     'bootstrap' => ['log'],
+    'defaultRoute' => 'site/index',
+    'language' => 'ru',
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+            'layout'=>'admin',
+            'defaultRoute' => 'clinics/index',
+        ],
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 's1WinyUOKA-PJqbkTFPik56ecg8bBywZ',
-            'baseUrl'=> '',  
+            'cookieValidationKey' => 'l_uJhpuje95SvftkFn0-q2tZEJ_C1JZr',
+            'baseUrl' => '',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -38,16 +48,29 @@ $config = [
                 ],
             ],
         ],
-        'db' => require(__DIR__ . '/db.php'),        
+        'db' => require(__DIR__ . '/db.php'),
         'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'enableStrictParsing' => false,
-            'rules' => [
-                // ...
-            ],
+          'showScriptName' => false,
+          'enablePrettyUrl' => true,
+          'rules' => [
+            'cities/<alias>' => 'site/cities',
+            'contact' => 'site/contact',
+            'login' => 'site/login',
+            'logout' => 'site/logout',
+            'about' => 'site/about',
+          ],
         ],
-        
+    ],
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => 'mihaildev\elfinder\PathController',
+            'access' => ['@'],
+            'root' => [
+                'baseUrl'=>'/web',
+                'path' => 'upload/global',
+                'name' => 'Global'
+            ],
+        ]
     ],
     'params' => $params,
 ];
@@ -57,15 +80,11 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
 }
 
