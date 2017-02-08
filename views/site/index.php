@@ -2,52 +2,365 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Заголовок';
+$this->registerJsFile('@web/js/owl.carousel.min.js', ['depends' => [\app\assets\AppAsset::className()]]);
+$this->registerJsFile('@web/js/owl_slider_init.js', ['depends' => [\app\assets\AppAsset::className()]]);
+$this->registerCssFile('@web/css/owl.carousel.min.css');
+$this->registerCssFile('@web/css/owl.theme.default.min.css');
 ?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+<div class="main-banner">
+    <div class="main-banner-slider owl-carousel">
+        <div class="main-banner-slider-item"><img src="images/main-banner-slider-item-4.jpg"></div>
+        <div class="main-banner-slider-item"><img src="images/main-banner-slider-item-5.jpg"></div>
+        <div class="main-banner-slider-item"><img src="images/main-banner-slider-item-1.jpg"></div>
+        <div class="main-banner-slider-item"><img src="images/main-banner-slider-item-2.jpg"></div>
+        <div class="main-banner-slider-item"><img src="images/main-banner-slider-item-3.jpg"></div>
     </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+    <div class="main-banner-sales center-all" style="display: none;">
+        <div class="main-banner-sales-logo">
+            <div class="main-banner-sales-logo-image">
+                <img alt="" src="images/sale-logo.png">
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
+            & предложения
         </div>
-
+        <div class="main-banner-sales-about">
+            <div class="main-banner-offer-number">27</div>
+            <div class="main-banner-offer-more">на весь ассортимент</div>
+        </div>
+        <div class="main-banner-sales-details">
+            Акция продлится до 27&nbsp;ноября включительно
+        </div>
     </div>
 </div>
+<div class="container">
+    <section class="categories-links clearfix">
+        <div class="category-link category-link-table-transparent left-col">
+            <div class="category-link-title center-all">
+                <div class="category-link-main">
+                    Настольные
+                </div>
+                <div class="category-link-sub">
+                    Прозрачные
+                </div>
+            </div>
+        </div>
+        <div class="category-link category-link-constructor right-col">
+            <div class="category-link-title center-all">
+                <div class="category-link-main">
+                    Конструктор
+                </div>
+                <div class="category-link-sub">
+                    Задать размер
+                </div>
+            </div>
+        </div>
+        <div class="category-link category-link-table-logo left-col">
+            <div class="category-link-title center-all">
+                <div class="category-link-main">
+                    Настольные
+                </div>
+                <div class="category-link-sub">
+                    С логотипом
+                </div>
+            </div>
+        </div>
+        <div class="category-link category-link-floor-transparent right-col">
+            <div class="category-link-title center-all">
+                <div class="category-link-main">
+                    Напольные
+                </div>
+                <div class="category-link-sub">
+                    Прозрачные
+                </div>
+            </div>
+        </div>
+        <div class="category-link category-link-floor-anti left-col">
+            <div class="category-link-title center-all">
+                <div class="category-link-main">
+                    Напольные
+                </div>
+                <div class="category-link-sub">
+                    Антивибрационные
+                </div>
+            </div>
+        </div>
+        <div class="category-link category-link-table-design left-col">
+            <div class="category-link-title center-all">
+                <div class="category-link-main">
+                    Настольные
+                </div>
+                <div class="category-link-sub">
+                    С дизайном
+                </div>
+            </div>
+        </div>
+        <div class="category-link category-link-sales right-col">
+            <div class="category-link-offer center-all">
+                Напольные
+                <div class="category-link-offer-number"><span>23</span></div>
+                на весь раздел "Ворсовые с лого"
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="popular">
+        <div class="section-title center-text">
+            <h2>Популярное</h2>
+        </div>
+        <div class="slider-items">
+            <div class="owl-carousel owl-theme item-slider popular-slider">
+                <div class="item item-popular">
+                    <div class="item-photo">
+                        <img alt="" src="images/item-1.jpg">
+                    </div>
+                    <div class="item-title">
+                        <a href="#">PROFI Hard квадратный</a>
+                    </div>
+                    <div class="item-price">
+                        750
+                    </div>
+                    <div class="item-types center-hor">
+                        <a href="#" class="item-type">Напольные</a> / <a href="#" class="item-type">Защитные</a> / <a href="#" class="item-type">С логотипом</a>
+                    </div>
+                </div>
+                <div class="item item-popular">
+                    <div class="item-photo">
+                        <img alt="" src="images/item-1.jpg">
+                    </div>
+                    <div class="item-title">
+                        <a href="#">PROFI Hard квадратный</a>
+                    </div>
+                    <div class="item-price">
+                        750
+                    </div>
+                    <div class="item-types center-hor">
+                        <a href="#" class="item-type">Напольные</a> / <a href="#" class="item-type">Защитные</a> / <a href="#" class="item-type">С логотипом</a>
+                    </div>
+                </div>
+                <div class="item item-popular">
+                    <div class="item-photo">
+                        <img alt="" src="images/item-1.jpg">
+                    </div>
+                    <div class="item-title">
+                        <a href="#">PROFI Hard квадратный</a>
+                    </div>
+                    <div class="item-price">
+                        750
+                    </div>
+                    <div class="item-types center-hor">
+                        <a href="#" class="item-type">Напольные</a> / <a href="#" class="item-type">Защитные</a> / <a href="#" class="item-type">С логотипом</a>
+                    </div>
+                </div>
+                <div class="item item-popular">
+                    <div class="item-photo">
+                        <img alt="" src="images/item-1.jpg">
+                    </div>
+                    <div class="item-title">
+                        <a href="#">PROFI Hard квадратный</a>
+                    </div>
+                    <div class="item-price">
+                        750
+                    </div>
+                    <div class="item-types center-hor">
+                        <a href="#" class="item-type">Напольные</a> / <a href="#" class="item-type">Защитные</a> / <a href="#" class="item-type">С логотипом</a>
+                    </div>
+                </div>
+                <div class="item item-popular">
+                    <div class="item-photo">
+                        <img alt="" src="images/item-1.jpg">
+                    </div>
+                    <div class="item-title">
+                        <a href="#">PROFI Hard квадратный</a>
+                    </div>
+                    <div class="item-price">
+                        750
+                    </div>
+                    <div class="item-types center-hor">
+                        <a href="#" class="item-type">Напольные</a> / <a href="#" class="item-type">Защитные</a> / <a href="#" class="item-type">С логотипом</a>
+                    </div>
+                </div>
+                <div class="item item-popular">
+                    <div class="item-photo">
+                        <img alt="" src="images/item-1.jpg">
+                    </div>
+                    <div class="item-title">
+                        <a href="#">PROFI Hard квадратный</a>
+                    </div>
+                    <div class="item-price">
+                        750
+                    </div>
+                    <div class="item-types center-hor">
+                        <a href="#" class="item-type">Напольные</a> / <a href="#" class="item-type">Защитные</a> / <a href="#" class="item-type">С логотипом</a>
+                    </div>
+                </div>
+                <div class="item item-popular">
+                    <div class="item-photo">
+                        <img alt="" src="images/item-1.jpg">
+                    </div>
+                    <div class="item-title">
+                        <a href="#">PROFI Hard квадратный</a>
+                    </div>
+                    <div class="item-price">
+                        750
+                    </div>
+                    <div class="item-types center-hor">
+                        <a href="#" class="item-type">Напольные</a> / <a href="#" class="item-type">Защитные</a> / <a href="#" class="item-type">С логотипом</a>
+                    </div>
+                </div>
+                <div class="item item-popular">
+                    <div class="item-photo">
+                        <img alt="" src="images/item-1.jpg">
+                    </div>
+                    <div class="item-title">
+                        <a href="#">PROFI Hard квадратный</a>
+                    </div>
+                    <div class="item-price">
+                        750
+                    </div>
+                    <div class="item-types center-hor">
+                        <a href="#" class="item-type">Напольные</a> / <a href="#" class="item-type">Защитные</a> / <a href="#" class="item-type">С логотипом</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories-links clearfix">
+        <div class="category-link category-link-floor-color left-col">
+            <div class="category-link-title center-all">
+                <div class="category-link-main">
+                    Напольные
+                </div>
+                <div class="category-link-sub">
+                    Цветные
+                </div>
+            </div>
+        </div>
+        <div class="category-link category-link-floor-design left-col">
+            <div class="category-link-title center-all">
+                <div class="category-link-main">
+                    Напольные
+                </div>
+                <div class="category-link-sub">
+                    С дизайном
+                </div>
+            </div>
+        </div>
+        <div class="category-link category-link-floor-logo right-col">
+            <div class="category-link-title center-all">
+                <div class="category-link-main">
+                    Напольные
+                </div>
+                <div class="category-link-sub">
+                    С логотипом
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="good-to-know">
+        <div class="section-title center-text">
+            <h2>Полезно знать</h2>
+        </div>
+        <div class="slider-items articles-items">
+            <div class="owl-carousel owl-theme item-slider articles-slider">
+                <div class="item item-article">
+                    <div class="item-photo item-article-photo">
+                        <img alt="" src="images/article-photo-1.jpg">
+                    </div>
+                    <div class="item-date">
+                        10.12.2016
+                    </div>
+                    <div class="item-title item-article-title">
+                        <a href="#">Силиконовые накладки</a>
+                    </div>
+                    <div class="item-text">
+                        Его мягкость способствует комфортному, удобному письму, к тому же стоят такие коврики не дорого
+                    </div>
+                    <a href="#" class="more">Узнать больше</a>
+                </div>
+                <div class="item item-article">
+                    <div class="item-photo item-article-photo">
+                        <img alt="" src="images/article-photo-2.jpg">
+                    </div>
+                    <div class="item-date">
+                        10.12.2016
+                    </div>
+                    <div class="item-title item-article-title">
+                        <a href="#">Силиконовые накладки</a>
+                    </div>
+                    <div class="item-text">
+                        Его мягкость способствует комфортному, удобному письму, к тому же стоят такие коврики не дорого
+                    </div>
+                    <a href="#" class="more">Узнать больше</a>
+                </div>
+                <div class="item item-article">
+                    <div class="item-photo item-article-photo">
+                        <img alt="" src="images/article-photo-3.jpg">
+                    </div>
+                    <div class="item-date">
+                        10.12.2016
+                    </div>
+                    <div class="item-title item-article-title">
+                        <a href="#">Силиконовые накладки</a>
+                    </div>
+                    <div class="item-text">
+                        Его мягкость способствует комфортному, удобному письму, к тому же стоят такие коврики не дорого
+                    </div>
+                    <a href="#" class="more">Узнать больше</a>
+                </div>
+                <div class="item item-article">
+                    <div class="item-photo item-article-photo">
+                        <img alt="" src="images/article-photo-1.jpg">
+                    </div>
+                    <div class="item-date">
+                        10.12.2016
+                    </div>
+                    <div class="item-title item-article-title">
+                        <a href="#">Силиконовые накладки</a>
+                    </div>
+                    <div class="item-text">
+                        Его мягкость способствует комфортному, удобному письму, к тому же стоят такие коврики не дорого
+                    </div>
+                    <a href="#" class="more">Узнать больше</a>
+                </div>
+                <div class="item item-article">
+                    <div class="item-photo item-article-photo">
+                        <img alt="" src="images/article-photo-2.jpg">
+                    </div>
+                    <div class="item-date">
+                        10.12.2016
+                    </div>
+                    <div class="item-title item-article-title">
+                        <a href="#">Силиконовые накладки</a>
+                    </div>
+                    <div class="item-text">
+                        Его мягкость способствует комфортному, удобному письму, к тому же стоят такие коврики не дорого
+                    </div>
+                    <a href="#" class="more">Узнать больше</a>
+                </div>
+                <div class="item item-article">
+                    <div class="item-photo item-article-photo">
+                        <img alt="" src="images/article-photo-3.jpg">
+                    </div>
+                    <div class="item-date">
+                        10.12.2016
+                    </div>
+                    <div class="item-title item-article-title">
+                        <a href="#">Силиконовые накладки</a>
+                    </div>
+                    <div class="item-text">
+                        Его мягкость способствует комфортному, удобному письму, к тому же стоят такие коврики не дорого
+                    </div>
+                    <a href="#" class="more">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
