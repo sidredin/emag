@@ -29,7 +29,7 @@ AppAsset::register($this);
             <div class="main-header-logo left-col">
                 <div class="center-all">
                     <a href="index.html">
-                        <img alt="" src="images/logo.png">
+                        <img alt="" src="/images/logo.png">
                     </a>
                 </div>
             </div>
@@ -95,7 +95,7 @@ AppAsset::register($this);
                             <div class="main-header-cart-drop-down dotted-border">
                                 <div class="main-header-cart-drop-down-item">
                                     <div class="main-header-cart-drop-down-item-picture">
-                                        <img alt="" src="images/cart-item-1.jpg">
+                                        <img alt="" src="/images/cart-item-1.jpg">
                                     </div>
                                     <div class="main-header-cart-drop-down-item-name">
                                         PROFI Hard квадратный
@@ -109,7 +109,7 @@ AppAsset::register($this);
                                 </div>
                                 <div class="main-header-cart-drop-down-item">
                                     <div class="main-header-cart-drop-down-item-picture">
-                                        <img alt="" src="images/cart-item-1.jpg">
+                                        <img alt="" src="/images/cart-item-1.jpg">
                                     </div>
                                     <div class="main-header-cart-drop-down-item-name">
                                         PROFI Hard квадратный
@@ -123,7 +123,7 @@ AppAsset::register($this);
                                 </div>
                                 <div class="main-header-cart-drop-down-item">
                                     <div class="main-header-cart-drop-down-item-picture">
-                                        <img alt="" src="images/cart-item-1.jpg">
+                                        <img alt="" src="/images/cart-item-1.jpg">
                                     </div>
                                     <div class="main-header-cart-drop-down-item-name">
                                         PROFI Fort прямоугольный с вырубкой
@@ -137,7 +137,7 @@ AppAsset::register($this);
                                 </div>
                                 <div class="main-header-cart-drop-down-item">
                                     <div class="main-header-cart-drop-down-item-picture">
-                                        <img alt="" src="images/cart-item-1.jpg">
+                                        <img alt="" src="/images/cart-item-1.jpg">
                                     </div>
                                     <div class="main-header-cart-drop-down-item-name">
                                         PROFI Hard квадратный
