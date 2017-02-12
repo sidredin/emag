@@ -1100,6 +1100,7 @@ a.item-type:hover {
 .catalog .item {
     width: 340px;    
     margin-right: 40px;
+    height: 361px;
 }
 
 aside {

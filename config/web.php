@@ -8,8 +8,7 @@ $config = [
     // 'catchAll' => ['site/offline'],
     'bootstrap' => ['log'],
     'language' => 'ru-RU',
-    'defaultRoute' => 'site/index',
-    'language' => 'ru',
+    'defaultRoute' => 'category/index',
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',
@@ -54,11 +53,8 @@ $config = [
           'showScriptName' => false,
           'enablePrettyUrl' => true,
           'rules' => [
-            'cities/<alias>' => 'site/cities',
-            'contact' => 'site/contact',
-            'login' => 'site/login',
-            'logout' => 'site/logout',
-            'about' => 'site/about',
+            'category/<id:\d+>' => 'category/view',
+            'catalog' => 'category/view',
           ],
         ],
     ],
