@@ -3,7 +3,6 @@
 /* @var $this yii\web\View */
 use yii\helpers\Html;
 
-$this->title = 'Заголовок';
 $this->registerJsFile('@web/js/owl.carousel.min.js', ['depends' => [\app\assets\AppAsset::className()]]);
 $this->registerJsFile('@web/js/owl_slider_init.js', ['depends' => [\app\assets\AppAsset::className()]]);
 $this->registerCssFile('@web/css/owl.carousel.min.css');

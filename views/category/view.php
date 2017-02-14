@@ -3,7 +3,6 @@
 /* @var $this yii\web\View */
 use yii\helpers\Html;
 
-$this->title = 'Категория такая-то';
 ?>
 <div class="with-dotted-border"></div>
 <div class="catalog clearfix">

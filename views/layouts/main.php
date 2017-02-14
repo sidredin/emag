@@ -28,8 +28,8 @@ AppAsset::register($this);
         <div class="clearfix">
             <div class="main-header-logo left-col">
                 <div class="center-all">
-                    <a href="index.html">
-                        <img alt="" src="/images/logo.png">
+                    <a href="<?=\yii\helpers\Url::home();?>">
+                        <?= Html::img('@web/images/logo.png', ['alt' => 'logo']) ?>
                     </a>
                 </div>
             </div>
