@@ -36,8 +36,10 @@ AppAsset::register($this);
             <div class="main-header-content right-col">
                 <div class="clearfix">
                     <div class="main-header-search left-col">
-                        <input type="search" placeholder="Поиск...">
-                        <button></button>
+                        <form action="<?= \yii\helpers\Url::to(['category/search'])?>" method="get">
+                            <input type="text" placeholder="Поиск..." name="q">
+                            <button></button>
+                        </form>
                     </div>
                     <nav class="main-header-main-menu right-col">
                         <a href="about-us.html">

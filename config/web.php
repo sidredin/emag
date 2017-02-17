@@ -57,6 +57,7 @@ $config = [
             'login' => 'site/login',
             'logout' => 'site/logout',
             'about' => 'site/about',
+            'search' => 'category/search',
             'category/<id:\d+>' => 'category/view',
             'catalog' => 'category/view',
             'product/<id:\d+>' => 'product/view',

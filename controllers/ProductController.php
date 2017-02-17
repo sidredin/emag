@@ -13,7 +13,7 @@ class ProductController extends AppController
         return $this->render('index');
     }
 
-    public function actionView($id)
+    public function actionView()
     {
         $id = Yii::$app->request->get('id');
         $product = Products::findOne($id);

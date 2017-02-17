@@ -14,7 +14,7 @@ class CategoryController extends AppController
     return $this->render('index', compact('hits'));
   }
 
-  public function actionView($id=null)
+  public function actionView()
   {
     $id = Yii::$app->request->get('id');
     if($id){
@@ -33,5 +33,16 @@ class CategoryController extends AppController
     }
 
     return $this->render('view', compact('products'));
+  }
+
+  public function actionSearch()
+  {
+    $q = trim(Yii::$app->request->get('q'));
+    if(!$q)
+      return $this->render('search');
+    $products = Products::find()->where(['like', 'name', $q])->all();
+    $title = 'Поиск по запросу: '.$q.' | '.Yii::$app->params['siteName'];
+    $this->setMeta($title);
+    return $this->render('search', compact('products', 'q'));
   }
 }
