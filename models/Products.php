@@ -20,6 +20,6 @@ class Products extends ActiveRecord
 
   public function getCategory()
   {
-    $this->hasOne(Categories::className(), ['id' => 'category_id']);
+    return $this->hasOne(Categories::className(), ['id' => 'category_id']);
   }
 }

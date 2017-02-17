@@ -53,8 +53,13 @@ $config = [
           'showScriptName' => false,
           'enablePrettyUrl' => true,
           'rules' => [
+            'contact' => 'site/contact',
+            'login' => 'site/login',
+            'logout' => 'site/logout',
+            'about' => 'site/about',
             'category/<id:\d+>' => 'category/view',
             'catalog' => 'category/view',
+            'product/<id:\d+>' => 'product/view',
           ],
         ],
     ],

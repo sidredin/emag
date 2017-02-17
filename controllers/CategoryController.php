@@ -20,6 +20,9 @@ class CategoryController extends AppController
     if($id){
       $products = Products::find()->where(['category_id'=>$id])->all();
       $category=Categories::findOne($id);
+      if(empty($category)){
+        throw new \yii\web\HttpException(404 ,'Такой категории не существует');
+      }
       $title = $category->name.' | '.Yii::$app->params['siteName'];
       $this->setMeta($title, $category->keywords, $category->description);
     }

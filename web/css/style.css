@@ -3602,3 +3602,7 @@ label[for="item-cart-color-green"] {
 .send-review-ps p {
     margin-bottom: 25px;
 }
+
+.site-error{
+    margin-bottom: 50px;
+}

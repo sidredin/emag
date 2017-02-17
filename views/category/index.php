@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->registerJsFile('@web/js/owl.carousel.min.js', ['depends' => [\app\assets\AppAsset::className()]]);
 $this->registerJsFile('@web/js/owl_slider_init.js', ['depends' => [\app\assets\AppAsset::className()]]);
@@ -118,7 +119,7 @@ $this->registerCssFile('@web/css/owl.theme.default.min.css');
                 <?= Html::img('@web/images/products/'.$hit->img, ['alt' => $hit->name]) ?>
               </div>
               <div class="item-title">
-                <a href="#"><?= $hit->name; ?></a>
+                <a href="<?= Url::to(['product/view', 'id' => $hit->id]); ?>"><?= $hit->name; ?></a>
               </div>
               <div class="item-price">
                 <?= $hit->price; ?>
