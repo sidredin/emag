@@ -155,4 +155,28 @@ $(function() {
   });
 });
 
+// Добавление товара в корзину
 
+$(function() {
+  $('.item-cart-buttons .btn-3').click(function(e){
+    e.preventDefault();
+    var id = $(this).data('id');
+    $.ajax({
+      url: '/cart/add',
+      data: {
+        id: id,
+        //var2: 'Какая-то ещё одна переменная',
+      },
+      type: 'GET',
+      success: function(res){
+        console.log(res);
+        if(!res) alert('Запрошены неверные данные');
+        //$('.item-cart-photo').append(res);
+      },
+      error: function(){
+        alert('Произошла какая-то ошибка');
+      }
+    });
+  });
+
+});

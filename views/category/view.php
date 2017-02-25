@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 ?>
 <div class="with-dotted-border"></div>
@@ -108,7 +109,7 @@ use yii\helpers\Html;
             <?= Html::img('@web/images/products/'.$product->img, ['alt' => $product->name]) ?>
           </div>
           <div class="item-title">
-            <a href="#"><?= $product->name; ?></a>
+            <a href="<?= Url::to(['product/view', 'id' => $product->id]); ?>"><?= $product->name; ?></a>
           </div>
           <div class="item-price">
             <?= $product->price; ?>

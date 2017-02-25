@@ -133,7 +133,7 @@ $this->registerCssFile('@web/css/owl.theme.default.min.css');
                 <a href="#" class="item-cart-inst"></a>
             </div>
             <div class="item-cart-buttons">
-                <a href="#" class="btn btn-3">Купить</a>
+                <a href="#" class="btn btn-3" data-id="<?= $product->id; ?>">Купить</a>
                 <button class="btn btn-2">Купить в 1 клик</button>
             </div>
         </aside>
