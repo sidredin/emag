@@ -32,6 +32,7 @@ class CategoryController extends AppController
       $this->setMeta($title, Yii::$app->params['keywords'], Yii::$app->params['description']);
     }
 
+    $this->layout = 'catalog';
     return $this->render('view', compact('products'));
   }
 
@@ -43,6 +44,7 @@ class CategoryController extends AppController
     $products = Products::find()->where(['like', 'name', $q])->all();
     $title = 'Поиск по запросу: '.$q.' | '.Yii::$app->params['siteName'];
     $this->setMeta($title);
+    $this->layout = 'catalog';
     return $this->render('search', compact('products', 'q'));
   }
 }

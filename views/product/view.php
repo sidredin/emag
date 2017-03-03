@@ -32,7 +32,7 @@ $this->registerCssFile('@web/css/owl.theme.default.min.css');
                 <?= $product->name ?>
             </div>
             <div class="item-cart-code">
-                Артикул: <?= $product->id ?>
+                Артикул: <?= $product->vendor_code ?>
             </div>
             <div class="item-cart-price">
                 <?= $product->price ?>

@@ -15,6 +15,8 @@ class CartController extends AppController
     $id = Yii::$app->request->get('id');
     $product = Products::findOne($id);
     if(empty($product)) return false;
+    $session =Yii::$app->session;
+    $session->open();
     $cart = new Cart();
     $cart->addToCart($product);
   }
